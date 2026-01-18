@@ -1,8 +1,18 @@
 # Homepage - 个人导航主页
 
+<div align="center">
+
+[![License](https://img.shields.io/github/license/daidr/homepage?style=flat-square)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/daidr/homepage?style=flat-square)](https://github.com/daidr/homepage/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/daidr/homepage?style=flat-square)](https://github.com/daidr/homepage/network/members)
+
 一个简洁美观的个人导航主页，支持自定义快捷方式、多搜索引擎、天气显示和动态壁纸。
 
-## 功能特性
+![](./preview.png)
+
+</div>
+
+## ✨ 特性
 
 - **时间与日期显示** - 实时显示当前时间和日期
 - **天气信息** - 支持手动设置城市或自动 IP 定位，显示当前天气状况
@@ -13,30 +23,55 @@
 - **后台管理** - 完整的后台管理界面，管理快捷方式、搜索引擎和系统设置
 - **响应式设计** - 适配桌面端和移动端
 
-## 技术栈
+## 🖼️ 功能
+
+### 主页
+- 大字体时间显示
+- 日期和天气信息
+- 搜索框（支持切换搜索引擎）
+- 快捷方式网格
+- Bing 每日壁纸背景
+
+### 后台管理
+- 快捷方式管理（增删改查）
+- 搜索引擎管理
+- 壁纸设置
+- 网站设置（标题、ICP备案号）
+- 密码修改
+
+## 🛠️ 技术栈
 
 ### 前端
-- Vue 3 + Composition API
-- Vite 5
-- Vue Router 4
-- Pinia（状态管理）
-- Axios
+- [Vue 3](https://vuejs.org/) + Composition API
+- [Vite 5](https://vitejs.dev/) - 构建工具
+- [Vue Router 4](https://router.vuejs.org/) - 路由管理
+- [Pinia](https://pinia.vuejs.org/) - 状态管理
+- [Axios](https://axios-http.com/) - HTTP 客户端
 
 ### 后端
-- Python 3.9+
-- Flask 3.0
-- Flask-SQLAlchemy
-- Flask-CORS
-- SQLite
+- [Python 3.9+](https://www.python.org/)
+- [Flask 3.0](https://flask.palletsprojects.com/) - Web 框架
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - ORM
+- [Flask-CORS](https://flask-cors.readthedocs.io/) - 跨域处理
+- [SQLite](https://www.sqlite.org/) - 数据库
 
-## 快速开始
+## 🚀 快速开始
 
 ### 环境要求
 
-- Node.js 18+
-- Python 3.9+
+- [Node.js](https://nodejs.org/) 18+
+- [Python](https://www.python.org/) 3.9+
 
-### 后端启动
+### 本地开发
+
+#### 1. 克隆项目
+
+```bash
+git clone https://github.com/yourusername/homepage.git
+cd homepage
+```
+
+#### 2. 后端启动
 
 ```bash
 # 进入后端目录
@@ -60,10 +95,10 @@ python app.py
 
 后端服务将在 `http://localhost:5000` 运行。
 
-### 前端启动
+#### 3. 前端启动
 
 ```bash
-# 进入前端目录
+# 在新终端窗口中，进入前端目录
 cd frontend
 
 # 安装依赖
@@ -75,6 +110,10 @@ npm run dev
 
 前端服务将在 `http://localhost:5173` 运行。
 
+#### 4. 访问应用
+
+打开浏览器访问 `http://localhost:5173` 即可访问主页。
+
 ### 默认账户
 
 首次启动时会自动创建管理员账户：
@@ -82,9 +121,9 @@ npm run dev
 - 用户名：`admin`
 - 密码：`admin123`
 
-**请在首次登录后立即修改密码！**
+> ⚠️ **安全提醒**：请在首次登录后立即修改密码！
 
-## 项目结构
+## 📁 项目结构
 
 ```
 homepage/
@@ -115,7 +154,7 @@ homepage/
 └── README.md
 ```
 
-## API 接口
+## 🔌 API 接口
 
 ### 认证相关
 | 方法 | 路径 | 描述 |
@@ -155,7 +194,7 @@ homepage/
 | GET | `/api/location` | IP 定位获取城市 |
 | GET | `/api/search-suggestions` | 获取搜索建议 |
 
-## 配置说明
+## ⚙️ 配置说明
 
 ### 后端环境变量
 
@@ -166,19 +205,19 @@ homepage/
 SECRET_KEY=your-super-secret-key-change-this
 
 # Flask 环境
-FLASK_ENV=production
+FLASK_ENV=development
 ```
 
 ### 前端环境变量
 
-创建 `frontend/.env.production` 文件：
+创建 `frontend/.env` 文件：
 
 ```bash
-# API 地址（同域名部署时留空）
-VITE_API_BASE_URL=
+# API 地址配置
+VITE_API_BASE_URL=http://localhost:5000
 ```
 
-## 生产环境部署
+## 📦 生产环境部署
 
 详细的生产环境部署步骤请参考 [DEPLOY.md](./DEPLOY.md)，包含：
 
@@ -190,22 +229,6 @@ VITE_API_BASE_URL=
 - 常用运维命令
 - 故障排查指南
 
-## 截图预览
+## 📄 许可证
 
-### 主页
-- 大字体时间显示
-- 日期和天气信息
-- 搜索框（支持切换搜索引擎）
-- 快捷方式网格
-- Bing 每日壁纸背景
-
-### 后台管理
-- 快捷方式管理（增删改查）
-- 搜索引擎管理
-- 壁纸设置
-- 网站设置（标题、ICP备案号）
-- 密码修改
-
-## 许可证
-
-MIT License
+本项目采用 [MIT License](./LICENSE)。
