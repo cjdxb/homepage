@@ -1,4 +1,4 @@
-# Homepage - 个人导航主页
+# Homepage
 
 <div align="center">
 
@@ -219,15 +219,7 @@ VITE_API_BASE_URL=http://localhost:5000
 
 ## 📦 生产环境部署
 
-详细的生产环境部署步骤请参考 [DEPLOY.md](./DEPLOY.md)，包含：
-
-- 服务器环境准备
-- Nginx 配置
-- Gunicorn 配置
-- Systemd 服务配置
-- SSL 证书配置
-- 常用运维命令
-- 故障排查指南
+详细的生产环境部署步骤请参考 [DEPLOY.md](./DEPLOY.md)。
 
 ## 📄 许可证
 
