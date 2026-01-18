@@ -102,10 +102,10 @@ python app.py
 cd frontend
 
 # 安装依赖
-npm install
+yarn install
 
 # 启动开发服务器
-npm run dev
+yarn dev
 ```
 
 前端服务将在 `http://localhost:5173` 运行。

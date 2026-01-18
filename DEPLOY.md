@@ -221,7 +221,7 @@ curl http://127.0.0.1:9320/api/shortcuts
 cd /opt/homepage/frontend
 
 # 安装依赖
-npm install
+yarn install
 ```
 
 ### 2. 配置生产环境 API 地址
@@ -249,7 +249,7 @@ VITE_API_BASE_URL=
 cd /opt/homepage/frontend
 
 # 构建生产版本
-npm run build
+yarn build
 ```
 
 构建完成后，静态文件将生成在 `dist` 目录中。
@@ -540,8 +540,8 @@ pip install -r requirements.txt
 
 # 重新构建前端
 cd ../frontend
-npm install
-npm run build
+yarn install
+yarn build
 sudo cp -r dist/* /var/www/homepage/
 
 # 重启后端服务
